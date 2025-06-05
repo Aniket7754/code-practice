@@ -6,7 +6,8 @@ const newpromise = new Promise((resolve , reject) => {
 //     console.log("result" , result*2)
 // })
 
-Promise.resolve(10)
+Promise.reject(10)
   .then(x => x + 5)
   .then(x => x * 2)
-  .then(x => console.log(x)); // Output?
+  .then(x => console.log(x))
+  .catch(err => console.log("New" , err)) // Output?
